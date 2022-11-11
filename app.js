@@ -16,6 +16,8 @@ const drinkDessertMenuBtn = document.querySelector(".drink-dessert-menu-button")
 const menuBackBtn = document.querySelector(".menu-back-button")
 const mainResetBtn = document.querySelector(".main-reset-button")
 const finishBtn = document.querySelector(".finish-button")
+const orderChangeBtn = document.querySelector(".order-change-button")
+const finalResetBtn = document.querySelector(".final-reset-button")
 
 foodMenuBtn.addEventListener("click",function() {
     openMenu(foodsArr)
@@ -36,7 +38,23 @@ mainResetBtn.addEventListener("click",function() {
 finishBtn.addEventListener("click",function() {
     checkOut()
 })
-
+orderChangeBtn.addEventListener("click",function() {
+    mainWindow.classList.remove("back")
+    selectionWindow.classList.remove("back")
+    orderDisplay.classList.remove("back")
+    checkOutWindow.classList.add("back")
+    finalOrderImageGrid.innerHTML = ""
+})
+finalResetBtn.addEventListener("click",function() {
+    orderImageGrid.innerHTML = ""
+    menuImageGrid.innerHTML = ""
+    currentOrder = 0
+    currentTotal = 0
+    mainWindow.classList.remove("back")
+    selectionWindow.classList.remove("back")
+    orderDisplay.classList.remove("back")
+    checkOutWindow.classList.add("back")
+})
 
 const foodsArr = ["./images/foods/img1.png","./images/foods/img2.png", "./images/foods/img3.png", "./images/foods/img4.png", "./images/foods/img5.png", "./images/foods/img6.png", "./images/foods/img7.png", "./images/foods/img8.png", "./images/foods/img9.png", "./images/foods/img10.png", "./images/foods/img11.png", "./images/foods/img12.png", "./images/foods/img13.png", "./images/foods/img14.png", "./images/foods/img15.png", "./images/foods/img16.png", "./images/foods/img17.png", "./images/foods/img18.png", "./images/foods/img19.png"]
 const foodsTextArr = ["rice", "rice ball", "curry and rice", "grilled fish", "bread", "sandwich", "pancakes", "pizza", "hamburger", "hot dog", "french fries", "fried chicken", "sausage", "steak", "omelet", "spaghetti", "pie", "salad", "soup"]
@@ -104,6 +122,10 @@ function openMenu(list) {
         x.addEventListener("click",function() {
             if ( currentOrder < 10 ) {
             let thisOrder = x.getAttribute("src")
+            x.classList.add("selected")
+            setTimeout( () => {
+                x.classList.remove("selected")
+            }, 1000)
             orderImageGrid.innerHTML += `<div class="order-image-grid-box"><img class="order-image" src="${thisOrder}"></img></div>`
             currentOrder++
             currentTotal += prices[thisOrder]
@@ -113,6 +135,7 @@ function openMenu(list) {
                 y.addEventListener("click",function() {
                     if ( y.innerHTML != "" ) {
                         let thisPrice = prices[y.firstChild.getAttribute("src")]
+                        console.log(menuImages)
                         y.remove()
                         currentOrder--
                         currentTotal -= thisPrice
@@ -128,6 +151,7 @@ function openMenu(list) {
 
 function checkOut() {
     finalOrderImageGrid.innerHTML = orderImageGrid.innerHTML
+    menuImageGrid.innerHTML = ""
     if ( !menuWindow.classList.contains("back") ) {
         menuWindow.classList.add("back")
     }
