@@ -56,9 +56,9 @@ finalResetBtn.addEventListener("click",function() {
     checkOutWindow.classList.add("back")
 })
 
-const foodsArr = ["./images/foods/img1.png","./images/foods/img2.png", "./images/foods/img3.png", "./images/foods/img4.png", "./images/foods/img5.png", "./images/foods/img6.png", "./images/foods/img7.png", "./images/foods/img8.png", "./images/foods/img9.png", "./images/foods/img10.png", "./images/foods/img11.png", "./images/foods/img12.png", "./images/foods/img13.png", "./images/foods/img14.png", "./images/foods/img15.png", "./images/foods/img16.png", "./images/foods/img17.png", "./images/foods/img18.png", "./images/foods/img19.png"]
-const foodsTextArr = ["rice", "rice ball", "curry and rice", "grilled fish", "bread", "sandwich", "pancakes", "pizza", "hamburger", "hot dog", "french fries", "fried chicken", "sausage", "steak", "omelet", "spaghetti", "pie", "salad", "soup"]
-const foodsPriceArr = [130, 120, 490, 470, 160, 180, 300, 500, 570, 290, 260, 250, 190, 630, 410, 560, 330, 240, 270]
+const foodsArr = ["./images/foods/img1.png","./images/foods/img2.png", "./images/foods/img3.png", "./images/foods/img4.png", "./images/foods/img5.png", "./images/foods/img6.png", "./images/foods/img7.png", "./images/foods/img8.png", "./images/foods/img9.png", "./images/foods/img10.png", "./images/foods/img11.png", "./images/foods/img12.png", "./images/foods/img13.png", "./images/foods/img14.png", "./images/foods/img15.png", "./images/foods/img16.png", "./images/foods/img17.png", "./images/foods/img18.png", "./images/foods/img19.png", "./images/foods/img20.png", "./images/foods/img21.png", "./images/foods/img22.png", "./images/foods/img23.png", "./images/foods/img24.png", "./images/foods/img25.png"]
+const foodsTextArr = ["rice", "rice ball", "curry and rice", "grilled fish", "bread", "sandwich", "pancakes", "pizza", "hamburger", "hot dog", "french fries", "fried chicken", "sausage", "steak", "omelet", "spaghetti", "pie", "salad", "soup", "okonomiyaki", "gyoza", "ramen", "soba", "sushi", "tempura"]
+const foodsPriceArr = [130, 120, 490, 470, 160, 180, 300, 500, 570, 290, 260, 250, 190, 630, 410, 560, 330, 240, 270, 340, 220, 480, 420, 350, 590]
 const dessertsArr = ["./images/desserts/img1.png","./images/desserts/img2.png", "./images/desserts/img3.png", "./images/desserts/img4.png", "./images/desserts/img5.png", "./images/desserts/img6.png", "./images/desserts/img7.png", "./images/desserts/img8.png"]
 const dessertsTextArr = ["cake", "parfait", "pudding", "ice cream", "shaved ice", "chocolate", "popcorn", "snack food"]
 
@@ -70,8 +70,8 @@ const fruitsvegetablesTextArr = ["apple", "banana", "bean", "brocolli", "cabbage
 const tastesArr = ["./images/tastes/img1.png","./images/tastes/img2.png", "./images/tastes/img3.png", "./images/tastes/img4.png", "./images/tastes/img5.png", "./images/tastes/img6.png", "./images/tastes/img7.png", "./images/tastes/img8.png", "./images/tastes/img9.png", "./images/tastes/img10.png"]
 const tastesTextArr = ["bitter", "sweet", "salty", "sour", "spicy", "delicious", "soft", "hard", "cold", "hot"]
 
-const drinksDessertsCombo = ["./images/drinks/img1.png","./images/drinks/img2.png", "./images/drinks/img3.png", "./images/drinks/img4.png", "./images/drinks/img5.png", "./images/drinks/img6.png", "./images/drinks/img7.png", "./images/drinks/img8.png", "./images/desserts/img1.png","./images/desserts/img2.png", "./images/desserts/img3.png", "./images/desserts/img4.png", "./images/desserts/img5.png", "./images/desserts/img6.png", "./images/desserts/img7.png", "./images/desserts/img8.png"]
-const drinksDessertsPriceArr = [150, 140, 0, 200, 130, 110, 0, 100, 250, 320, 210, 220, 170, 110, 190, 120]
+const drinksDessertsCombo = ["./images/drinks/img1.png","./images/drinks/img2.png", "./images/drinks/img3.png", "./images/drinks/img4.png", "./images/drinks/img5.png", "./images/drinks/img6.png", "./images/drinks/img7.png", "./images/drinks/img8.png", "./images/desserts/img1.png","./images/desserts/img2.png", "./images/desserts/img3.png", "./images/desserts/img4.png", "./images/desserts/img5.png", "./images/desserts/img6.png", "./images/desserts/img7.png", "./images/desserts/img8.png", "./images/fruitsvegetables/img1.png", "./images/fruitsvegetables/img7.png", "./images/fruitsvegetables/img11.png", "./images/fruitsvegetables/img16.png", "./images/fruitsvegetables/img20.png", "./images/fruitsvegetables/img21.png", "./images/fruitsvegetables/img22.png", "./images/fruitsvegetables/img25.png", "./images/fruitsvegetables/img27.png"]
+const drinksDessertsPriceArr = [150, 140, 0, 200, 130, 110, 0, 100, 250, 320, 210, 220, 170, 110, 190, 120, 150, 200, 200, 300, 100, 250, 300, 400, 500]
 
 const prices = {
     "./images/foods/img1.png": 130,
@@ -93,6 +93,12 @@ const prices = {
     "./images/foods/img17.png": 330, 
     "./images/foods/img18.png": 240, 
     "./images/foods/img19.png": 270,
+    "./images/foods/img20.png": 340,
+    "./images/foods/img21.png": 220,
+    "./images/foods/img22.png": 480,
+    "./images/foods/img23.png": 420,
+    "./images/foods/img24.png": 350,
+    "./images/foods/img25.png": 590,
     "./images/drinks/img1.png": 150,
     "./images/drinks/img2.png": 140, 
     "./images/drinks/img3.png": 0, 
@@ -108,7 +114,16 @@ const prices = {
     "./images/desserts/img5.png": 170, 
     "./images/desserts/img6.png": 110, 
     "./images/desserts/img7.png": 190, 
-    "./images/desserts/img8.png": 120 
+    "./images/desserts/img8.png": 120, 
+    "./images/fruitsvegetables/img1.png": 150, 
+    "./images/fruitsvegetables/img7.png": 200, 
+    "./images/fruitsvegetables/img11.png": 200, 
+    "./images/fruitsvegetables/img16.png": 300, 
+    "./images/fruitsvegetables/img20.png": 100, 
+    "./images/fruitsvegetables/img21.png": 250, 
+    "./images/fruitsvegetables/img22.png": 300, 
+    "./images/fruitsvegetables/img25.png": 400, 
+    "./images/fruitsvegetables/img27.png": 500
 }
 
 function openMenu(list) {
