@@ -31,7 +31,7 @@ html, body {
 }
 .main-buttons {
     width: 60%;
-    font-size: 4rem;
+    font-size: 3rem;
     border-radius: 10px;
     background-color: white;
     box-shadow: 1px 1px 12px 4px black;
@@ -114,7 +114,7 @@ html, body {
 .finish-button {
     width: 80%;
     height: 100%;
-    font-size: 3rem;
+    font-size: 2rem;
     border-radius: 10px;
     background-color: white;
     box-shadow: 1px 1px 12px 4px black;
@@ -199,7 +199,7 @@ button:hover {
     display: none;
 }
 
-@media (max-height:800px) {
+@media (max-height:600px) {
     .menu-back-button {
         font-size: 1.5rem;
     }
@@ -231,7 +231,7 @@ button:hover {
         max-width: 180px;
     }
 }
-@media (max-height:600px) {
+@media (max-height:450px) {
     .menu-back-button {
         font-size: 1rem;
     }
